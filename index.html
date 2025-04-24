@@ -1,79 +1,101 @@
 <!DOCTYPE html>
 <html lang="th">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>สุขสันต์วันเกิดฮารุ</title>
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Prompt&display=swap');
-    body {
-      font-family: 'Prompt', sans-serif;
-      background-color: pink;
-      padding: 0;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      background-size: cover;
-      background-position: center;
-    }
-    .card {
-      background-color: white;
-      padding: 2rem;
-      border-radius: 1.5rem;
-      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
-      max-width: 400px;
-      text-align: center;
-    }
-    .card img {
-      width: 150px;
-      margin-bottom: 1rem;
-      border-radius: 1rem;
-    }
-    .title {
-      font-size: 1.8rem;
-      color: #ff914d;
-      margin-bottom: 1rem;
-    }
-    .message {
-      font-size: 1.1rem;
-      line-height: 1.6;
-      margin-bottom: 1rem;
-    }
-    .controls button {
-      font-size: 1rem;
-      padding: 0.5rem 1rem;
-      border: none;
-      border-radius: 0.75rem;
-      background-color: #ff914d;
-      color: white;
-      cursor: pointer;
-      margin: 0.25rem;
-    }
-  </style>
-</head>
-<body>
-  <div class="card">
-    <img src="https://media.discordapp.net/attachments/1343941871952593039/1350441039202226207/IMG_1049.jpg?ex=680b7bb9&is=680a2a39&hm=e2cc0abb646b3008c9f2f8e5abdf6b6e75dc9183f3dc03f4d703069249acf990&" />
-    <div class="title">วันนี้วันเกิดใครเอ่ยยย ใช่วันเกิดเบบี๋คนนี้อ้ะเป่าา</div>
-    <div class="message">
-      Happy birthday, baby.<br>
-      ขอให้ฮารุมีความสุขมากๆ สุขภาพแข็งแรง เรียนเก่งอยู่แล้วก็ขอให้เก่งขึ้นไปอีก<br>
-      สมองไบรท์สุดๆ น่ารักแบบนี้ไปนานๆ มีแต่เรื่องดีๆ เข้ามาในชีวิต<br>
-      ขอให้เจอแต่คนดีๆ ไม่ว่าจะอยู่ที่ไหนก็ขอให้รู้ไว้นะ<br>
-      ว่ามีเค้าคอยเอาใจช่วยอยู่ตรงนี้เสมอ<br>
-      รักคุณนะ แฮปปี้เบิร์ธเดย์อีกครั้งเบบี๋!
-    </div>
-    <div class="controls">
-      <button onclick="document.getElementById('bgmusic').play()">เล่นเพลง</button>
-      <button onclick="document.getElementById('bgmusic').pause()">หยุดเพลง</button>
-    </div>
-  </div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>สุขสันต์วันเกิดฮารุ</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Prompt&display=swap");
+      body {
+        font-family: "Prompt", sans-serif;
+        background-color: #fff7ec;
+        margin: 0;
+        padding: 0;
+        height: 100vh;
+        width: 100vw;
+        background-color: pink;
+        overflow: hidden;
+        background-size: cover;
+        background-position: center;
+        position: relative;
+      }
+      .card {
+        background-color: white;
+        padding: 2rem;
+        border-radius: 1.5rem;
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+        max-width: 400px;
+        text-align: center;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 1;
+      }
+      .card img {
+        width: 150px;
+        margin-bottom: 1rem;
+      }
+      .title {
+        font-size: 1.8rem;
+        color: #ff914d;
+        margin-bottom: 1rem;
+      }
+      .message {
+        font-size: 1.1rem;
+        line-height: 1.6;
+        margin-bottom: 1rem;
+      }
+      .controls button {
+        font-size: 1rem;
+        padding: 0.5rem 1rem;
+        border: none;
+        border-radius: 0.75rem;
+        background-color: #ff914d;
+        color: white;
+        cursor: pointer;
+        margin: 0.25rem;
+      }
 
-  <audio id="bgmusic" loop>
-    <source src="https://files.catbox.moe/2dn12r.mp3" type="audio/mp3">
-    เบราว์เซอร์ของคุณไม่รองรับการเล่นเพลง
-  </audio>
-</body>
-</html>
+      /* หัวใจบิน */
+      .heart {
+        position: absolute;
+        bottom: -50px;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 3rem;
+        color: red;
+        animation: heartFly 3s ease-out infinite;
+      }
+
+      @keyframes heartFly {
+        0% {
+          bottom: -50px;
+          opacity: 1;
+          transform: translateX(-50%) translateY(0);
+        }
+        100% {
+          bottom: 100vh;
+          opacity: 0;
+          transform: translateX(-50%) translateY(-100px);
+        }
+      }
+
+      /* ดอกไม้ตก */
+      .flower {
+        position: absolute;
+        top: -50px;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 2rem;
+        animation: flowerFall 5s linear infinite;
+      }
+
+      @keyframes flowerFall {
+        0% {
+          top: -50px;
+          opacity: 1;
+        }
+        100% {
+          top: 100vh;
 
