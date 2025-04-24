@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>สุขสันต์วันเกิดฮารุ</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Prompt&display=swap');
+    body {
+      font-family: 'Prompt', sans-serif;
+      background-color: #fff7ec;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-image: url('https://i.imgur.com/R98B8DQ.png');
+      background-size: cover;
+      background-position: center;
+    }
+    .card {
+      background-color: white;
+      padding: 2rem;
+      border-radius: 1.5rem;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+      max-width: 400px;
+      text-align: center;
+    }
+    .card img {
+      width: 150px;
+      margin-bottom: 1rem;
+    }
+    .title {
+      font-size: 1.8rem;
+      color: #ff914d;
+      margin-bottom: 1rem;
+    }
+    .message {
+      font-size: 1.1rem;
+      line-height: 1.6;
+      margin-bottom: 1rem;
+    }
+    .controls button {
+      font-size: 1rem;
+      padding: 0.5rem 1rem;
+      border: none;
+      border-radius: 0.75rem;
+      background-color: #ff914d;
+      color: white;
+      cursor: pointer;
+      margin: 0.25rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <img src="https://i.imgur.com/BkYwUnI.png" alt="orange cat" />
+    <div class="title">วันนี้วันเกิดใครเอ่ยยย ใช่วันเกิดเบบี๋คนนี้อ้ะเป่าา</div>
+    <div class="message">
+      Happy birthday, baby.<br>
+      ขอให้ฮารุมีความสุขมากๆ สุขภาพแข็งแรง เรียนเก่งอยู่แล้วก็ขอให้เก่งขึ้นไปอีก<br>
+      สมองไบรท์สุดๆ น่ารักแบบนี้ไปนานๆ มีแต่เรื่องดีๆ เข้ามาในชีวิต<br>
+      ขอให้เจอแต่คนดีๆ ไม่ว่าจะอยู่ที่ไหน ทำอะไร ก็ขอให้รู้ไว้นะ<br>
+      ว่ามีเค้าคอยเอาใจช่วยอยู่ตรงนี้เสมอ<br>
+      รักคุณนะ แฮปปี้เบิร์ธเดย์อีกครั้งเบบี๋
+    </div>
+    <div class="controls">
+      <button onclick="document.getElementById('bgmusic').play()">เล่นเพลง</button>
+      <button onclick="document.getElementById('bgmusic').pause()">หยุดเพลง</button>
+    </div>
+  </div>
+
+  <audio id="bgmusic" loop>
+    <source src="https://sndup.net/m7wjj/dl?raw=1" type="audio/mp3">
+    Your browser does not support the audio element.
+  </audio>
+</body>
+</html>
